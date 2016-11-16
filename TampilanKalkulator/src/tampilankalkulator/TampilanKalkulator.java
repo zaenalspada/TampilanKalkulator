@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package tampilankalkulator;
 
 /**
@@ -61,12 +57,27 @@ int pilih;
         getContentPane().add(display, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 220, 30));
 
         btnAngka3.setText("3");
+        btnAngka3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAngka3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnAngka3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 60, -1));
 
         btnAngka2.setText("2");
+        btnAngka2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAngka2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnAngka2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 60, -1));
 
         btnAngka4.setText("4");
+        btnAngka4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAngka4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnAngka4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 60, -1));
 
         btnAngka5.setText("5");
@@ -155,6 +166,24 @@ display.setText(angka);
     private void displayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_displayActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_displayActionPerformed
+
+    private void btnAngka2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAngka2ActionPerformed
+      angka += "2";
+
+display.setText(angka);
+    }//GEN-LAST:event_btnAngka2ActionPerformed
+
+    private void btnAngka3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAngka3ActionPerformed
+       angka += "3";
+
+display.setText(angka);
+    }//GEN-LAST:event_btnAngka3ActionPerformed
+
+    private void btnAngka4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAngka4ActionPerformed
+     angka += "4";
+
+display.setText(angka);
+    }//GEN-LAST:event_btnAngka4ActionPerformed
 
     /**
      * @param args the command line arguments
