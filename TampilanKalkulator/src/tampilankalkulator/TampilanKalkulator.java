@@ -113,9 +113,19 @@ int pilih;
         getContentPane().add(btnAngka8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 60, -1));
 
         btnAngka9.setText("9");
+        btnAngka9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAngka9ActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnAngka9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 60, -1));
 
         btnAngka0.setText("0");
+        btnAngka0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAngka0ActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnAngka0, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 60, -1));
 
         btnHapus.setText("C");
@@ -162,7 +172,9 @@ display.setText(angka);
     }//GEN-LAST:event_btnAngka7ActionPerformed
 
     private void btnAngka8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAngka8ActionPerformed
-        // TODO add your handling code here:
+       angka += "8";
+
+display.setText(angka);
     }//GEN-LAST:event_btnAngka8ActionPerformed
 
     private void btnBagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBagiActionPerformed
@@ -208,6 +220,18 @@ display.setText(angka);
 
 display.setText(angka);
     }//GEN-LAST:event_btnAngka6ActionPerformed
+
+    private void btnAngka9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAngka9ActionPerformed
+       angka += "9";
+
+display.setText(angka);
+    }//GEN-LAST:event_btnAngka9ActionPerformed
+
+    private void btnAngka0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAngka0ActionPerformed
+        angka += "0";
+
+display.setText(angka);
+    }//GEN-LAST:event_btnAngka0ActionPerformed
 
     /**
      * @param args the command line arguments
