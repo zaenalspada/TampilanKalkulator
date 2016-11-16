@@ -177,6 +177,11 @@ int pilih;
         getContentPane().add(btnKoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 60, -1));
 
         btnSamaDengan.setText("=");
+        btnSamaDengan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSamaDenganActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnSamaDengan, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 130, -1));
 
         btnKali.setText("*");
@@ -203,7 +208,13 @@ display.setText(angka);
     }//GEN-LAST:event_btnAngka8ActionPerformed
 
     private void btnBagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBagiActionPerformed
-        // TODO add your handling code here:
+      angka1=Double.parseDouble(angka);
+
+display.setText("/");
+
+angka="";
+
+pilih=4;
     }//GEN-LAST:event_btnBagiActionPerformed
 
     private void btnAngka1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAngka1ActionPerformed
@@ -307,6 +318,64 @@ angka="";
 
 pilih=3;
     }//GEN-LAST:event_btnKaliActionPerformed
+
+    private void btnSamaDenganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSamaDenganActionPerformed
+         switch(pilih){
+
+        case 1:
+
+            angka2 = Double.parseDouble(angka);
+
+            jumlah = angka1 + angka2;
+
+            angka = Double.toString(jumlah);
+
+            display.setText(angka);
+
+            break;
+
+        case 2:
+
+            angka2 = Double.parseDouble(angka);
+
+            jumlah = angka1 - angka2;
+
+            angka = Double.toString(jumlah);
+
+            display.setText(angka);
+
+            break;
+
+        case 3:
+
+            angka2 = Double.parseDouble(angka);
+
+            jumlah = angka1 * angka2;
+
+            angka = Double.toString(jumlah);
+
+            display.setText(angka);
+
+            break;
+
+        case 4:
+
+            angka2 = Double.parseDouble(angka);
+
+            jumlah = angka1 / angka2;
+
+            angka = Double.toString(jumlah);
+
+            display.setText(angka);
+
+            break;
+
+            default:
+
+            break;
+
+} 
+    }//GEN-LAST:event_btnSamaDenganActionPerformed
 
     /**
      * @param args the command line arguments
