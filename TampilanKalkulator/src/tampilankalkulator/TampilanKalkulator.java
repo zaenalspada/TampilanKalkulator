@@ -129,6 +129,11 @@ int pilih;
         getContentPane().add(btnAngka0, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 60, -1));
 
         btnHapus.setText("C");
+        btnHapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHapusActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 60, -1));
 
         btnAngka1.setText("1");
@@ -154,6 +159,11 @@ int pilih;
         getContentPane().add(btnBagi, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 60, -1));
 
         btnKoma.setText(",");
+        btnKoma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKomaActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnKoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 60, -1));
 
         btnSamaDengan.setText("=");
@@ -232,6 +242,25 @@ display.setText(angka);
 
 display.setText(angka);
     }//GEN-LAST:event_btnAngka0ActionPerformed
+
+    private void btnKomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKomaActionPerformed
+     angka += ".";
+
+display.setText(angka);
+    }//GEN-LAST:event_btnKomaActionPerformed
+
+    private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
+          display.setText("");
+
+angka1=0.0;
+
+angka2=0.0;
+
+jumlah=0.0;
+
+angka="";
+    
+    }//GEN-LAST:event_btnHapusActionPerformed
 
     /**
      * @param args the command line arguments
