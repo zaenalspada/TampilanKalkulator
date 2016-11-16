@@ -145,6 +145,11 @@ int pilih;
         getContentPane().add(btnAngka1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 60, -1));
 
         btnTambah.setText("+");
+        btnTambah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTambahActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 60, -1));
 
         btnKurang.setText("-");
@@ -261,6 +266,17 @@ jumlah=0.0;
 angka="";
     
     }//GEN-LAST:event_btnHapusActionPerformed
+
+    private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
+       angka1=Double.parseDouble(angka);
+
+display.setText("+");
+
+angka="";
+
+pilih=1;
+       
+    }//GEN-LAST:event_btnTambahActionPerformed
 
     /**
      * @param args the command line arguments
