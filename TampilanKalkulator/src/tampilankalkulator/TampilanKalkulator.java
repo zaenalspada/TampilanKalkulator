@@ -153,6 +153,11 @@ int pilih;
         getContentPane().add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 60, -1));
 
         btnKurang.setText("-");
+        btnKurang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKurangActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnKurang, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 60, -1));
 
         btnBagi.setText("/");
@@ -175,6 +180,11 @@ int pilih;
         getContentPane().add(btnSamaDengan, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 130, -1));
 
         btnKali.setText("*");
+        btnKali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKaliActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnKali, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 60, -1));
 
         pack();
@@ -277,6 +287,26 @@ angka="";
 pilih=1;
        
     }//GEN-LAST:event_btnTambahActionPerformed
+
+    private void btnKurangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKurangActionPerformed
+        angka1=Double.parseDouble(angka);
+
+display.setText("-");
+
+angka="";
+
+pilih=2;
+    }//GEN-LAST:event_btnKurangActionPerformed
+
+    private void btnKaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKaliActionPerformed
+        angka1=Double.parseDouble(angka);
+
+display.setText("*");
+
+angka="";
+
+pilih=3;
+    }//GEN-LAST:event_btnKaliActionPerformed
 
     /**
      * @param args the command line arguments
